@@ -1,0 +1,28 @@
+services:
+ nextcloud:
+  image: ghcr.io/linuxserver/nextcloud
+  container_name: nextcloud
+  environment:
+   - PUID=998
+   - PGID=100
+   - TZ=Europe/Moscow
+  volumes:
+   - /config/nextcloud/config:/config
+   - /data/data:/data 
+  depends_on:
+   - mariadb
+  ports: # uncomment this and the next line if you want to bypass the proxy
+   - 8080:80
+  restart: unless-stopped
+
+ mariadb:
+  image: ghcr.io/linuxserver/mariadb
+  container_name: nextclouddb
+  environment:
+   - PUID=998 
+   - PGID=100 
+   - MYSQL_ROOT_PASSWORD=.Q419Ik11x{md37};
+   - TZ=Europe/Moscow 
+  volumes:
+   - /config/nextclouddb:/config
+  restart: unless-stopped

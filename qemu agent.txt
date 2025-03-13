@@ -1,0 +1,15 @@
+Для активации QEMU Guest Agent выполните следующие шаги:
+
+В веб-интерфейсе Proxmox VE перейдите в раздел «Параметры» машины и включите QEMU Guest Agent.
+
+Подключитесь к виртуальной машине с помощью SSH или аналогичного инструмента и войдите с административными учётными данными.
+
+Обновите списки пакетов с помощью команды `sudo apt update`.
+
+Установите QEMU Guest Agent с помощью команды `sudo apt install qemu-guest-agent`.
+
+Активируйте службу для автоматического запуска при загрузке с помощью команды `sudo systemctl enable qemu-guest-agent`.
+
+Запустите QEMU Guest Agent с помощью команды `sudo systemctl start qemu-guest-agent`.
+
+Проверьте, работает ли агент правильно, с помощью команды `systemctl status qemu-guest-agent`.

@@ -1,0 +1,18 @@
+1. После установки proxmox устанавливаем скрипт Proxmox VE Post Install
+bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/misc/post-pve-install.sh)"
+
+2. Что бы расшарить подключенный диск:
+	- создаем file server turnkey ( если что обновляем template командой pveam update )
+	- создаем lxc контейнер ( например jellyfin )
+	- в контейнере устанавливаем cifs-utils (apt install cifs-utils)
+	- в хосте идем в cd /etc/fstab, где пишем 
+	//192.168.0.193/public    /mnt    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
+	- mount -a
+	- pct set 104 -mp1 /mnt-films,mp=/mnt
+		104 - номер контейнера 
+		mp1 - порядковый номер маунта
+		mnt-films - папка с хоста
+		mnt - папка контейнера
+
+3. Права на файлы в линукс  chmod -R +777 название_файла
+

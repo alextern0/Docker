@@ -1,0 +1,16 @@
+OpenMediaVault
+
+1. После установки OMV заходим по SSH в консоль и устанавливаем docker repo
+
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
+
+reboot
+
+2. Устанавливаем openmediavault-compose 7.2.16 в плагинах
+
+3. Создаем папки 
+- config
+- data
+- backup
+
+/srv/dev-disk-by-uuid-32d9f192-375e-44f9-8ebc-78f3cf6f401a/media

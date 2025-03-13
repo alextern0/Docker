@@ -1,0 +1,20 @@
+
+---
+services:
+  emby:
+    image: lscr.io/linuxserver/emby:latest
+    container_name: emby
+    environment:
+      - PUID=998
+      - PGID=100
+      - TZ=Europe/Moscow
+    volumes:
+      - /config/emby/library:/config
+      - /srv/dev-disk-by-uuid-58e3a117-4bd5-4d65-be3a-e722e8d91a17/storage/movies:/data/movies
+      - /srv/dev-disk-by-uuid-58e3a117-4bd5-4d65-be3a-e722e8d91a17/storage/tvshow:/data/tvshow
+      - /srv/dev-disk-by-uuid-58e3a117-4bd5-4d65-be3a-e722e8d91a17/storage/music:/data/music
+      - /opt/vc/lib:/opt/vc/lib #optional
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional
+    restart: unless-stopped

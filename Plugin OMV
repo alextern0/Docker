@@ -6,11 +6,11 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 
 reboot
 
-2. Устанавливаем openmediavault-compose 7.2.16 в плагинах
+2. Устанавливаем openmediavault-compose в плагинах
 
 3. Создаем папки 
 - config
 - data
 - backup
 
-/srv/dev-disk-by-uuid-32d9f192-375e-44f9-8ebc-78f3cf6f401a/media
+/srv/dev-disk-by-uuid-32d9f192-375e-44f9-8ebc-78f3cf6f401a/storage

@@ -7,6 +7,7 @@ bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/m
 	- в контейнере устанавливаем cifs-utils (apt install cifs-utils)
 	- в хосте идем в cd /etc/fstab, где пишем 
 	//192.168.0.193/public    /mnt    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
+	- создаем папку ( к примеру mnt-films ) на хосте
 	- mount -a
 	- pct set 104 -mp1 /mnt-films,mp=/mnt
 		104 - номер контейнера 

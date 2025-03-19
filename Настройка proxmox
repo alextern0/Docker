@@ -16,4 +16,6 @@ bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/m
 		mnt - папка контейнера
 
 3. Права на файлы в линукс  chmod -R +777 название_файла
+4. Обновление lxc контейнеров 
+                bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/update-lxcs.sh)" 
 

@@ -2,7 +2,7 @@
 bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/misc/post-pve-install.sh)"
 
 2. Что бы расшарить подключенный диск:
-	- создаем file server turnkey ( если что обновляем template командой pveam update )
+	- создаем file server turnkey ( если что обновляем template командой pveam update ) ставим в Options start at boot YES
 	- создаем lxc контейнер ( например jellyfin )
 	- в контейнере устанавливаем cifs-utils (apt install cifs-utils)
 	- в хосте идем в cd /etc/fstab, где пишем 

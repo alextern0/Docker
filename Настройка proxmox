@@ -1,5 +1,5 @@
 1. После установки proxmox устанавливаем скрипт Proxmox VE Post Install
-bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/misc/post-pve-install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
 
 2. Что бы расшарить подключенный диск:
 	- создаем file server turnkey ( если что обновляем template командой pveam update ) ставим в Options start at boot YES

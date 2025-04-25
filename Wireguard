@@ -1,0 +1,12 @@
+Wireguard
+- Создаем lxc wireguard (ubuntu 22.04) со статическим IP (192.168.0.130) но не запускаем его
+- Идем в хост: nano /etc/pve/lxc/123.conf
+	 lxc.cgroup2.devices.allow: c 10:200 rwm
+         lxc.mount.entry: /dev/net dev/net none bind,create=dir
+- Выходим из контейнера и прописываем
+	chown 100000:100000 /dev/net/tun
+	ls -l /dev/net/tun
+- Далее идем в контейнер wireguard под логином и паролем который установили при создании контейнера
+- apt update && apt upgrade -y
+- wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
+- устанавливаем все по умолчанию и фоткаем QR код

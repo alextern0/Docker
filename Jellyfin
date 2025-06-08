@@ -8,9 +8,8 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - /config/jellyfin:/config
-      - /srv/dev-disk-by-uuid-0b089cdf-4f2a-45ce-9bdb-9318ad7c4fd3/storage/movies:/data/movies
-      - /srv/dev-disk-by-uuid-0b089cdf-4f2a-45ce-9bdb-9318ad7c4fd3/storage/tvshow:/data/tvshow
-      - /srv/dev-disk-by-uuid-0b089cdf-4f2a-45ce-9bdb-9318ad7c4fd3/storage/music:/data/music
+      - /media/film:/media/film
+      - /media/serial:/media/serial
     ports:
       - 8096:8096
       - 8920:8920 #optional

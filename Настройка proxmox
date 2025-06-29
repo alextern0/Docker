@@ -10,8 +10,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/Proxmo
 //192.168.0.250/public    /media    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
 (IP и остальное smb контейнеров)
 - mount -a
-pct set 101 -mp0 /media/film,mp=/media/film
-pct set 101 -mp1 /media/serial,mp=/media/serial
+pct set 101 -mp0 /media,mp=/media
+pct set 102 -mp1 /media,mp=/media
 		104 - номер контейнера 
 		mp1 - порядковый номер маунта
 		mnt-films - папка с хоста

@@ -1,0 +1,10 @@
+services:
+  blackcandy:
+    ports:
+      - 3000:80
+    image: ghcr.io/blackcandy-org/blackcandy:latest
+    volumes:
+      - /config/blackcandy:/config
+      - /srv/dev-disk-by-uuid-5ca29675-8f04-4803-8f4f-39bac81e1e1b/work/music:/music
+    environment:
+      - MEDIA_PATH=/music

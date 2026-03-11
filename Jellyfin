@@ -8,27 +8,6 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - /config/jellyfin:/config
-      - /media/film:/media/film
-      - /media/serial:/media/serial
-    ports:
-      - 8096:8096
-      - 8920:8920 #optional
-      - 7359:7359/udp #optional
-      - 1900:1900/udp #optional
-    restart: unless-stopped
-
-
-
-services:
-  jellyfin:
-    image: lscr.io/linuxserver/jellyfin:latest
-    container_name: jellyfin
-    environment:
-      - PUID=998
-      - PGID=100
-      - TZ=Europe/Moscow
-    volumes:
-      - /config/jellyfin:/config
       - /srv/dev-disk-by-uuid-0e2479c5-2a03-4051-a5fb-a499feaa7669/storage/movies:/movies
       - /srv/dev-disk-by-uuid-0e2479c5-2a03-4051-a5fb-a499feaa7669/storage/tvshows:/tvshows
       - /srv/dev-disk-by-uuid-5ca29675-8f04-4803-8f4f-39bac81e1e1b/work/music:/music
@@ -38,4 +17,5 @@ services:
       - 7359:7359/udp #optional
       - 1900:1900/udp #optional
     restart: unless-stopped
+
 

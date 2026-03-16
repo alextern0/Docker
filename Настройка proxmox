@@ -5,7 +5,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/Proxmo
 	- создаем file server turnkey ( если что обновляем template командой pveam update ) ставим в Options start at boot YES
 	- создаем lxc контейнер ( например jellyfin )
 	- в контейнере устанавливаем cifs-utils (apt install cifs-utils)
-	- в хосте в разделе media создаем две папки film и serial (mkdir film serial)
+	- в хосте в разделе media создаем две папки serial и movie (mkdir movie serial)
 	- в хосте идем в cd /etc/fstab, где пишем 
 //192.168.0.250/public    /media    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
 (IP и остальное smb контейнеров)

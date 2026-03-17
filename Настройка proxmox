@@ -7,9 +7,9 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/Proxmo
 	- в контейнере устанавливаем cifs-utils (apt install cifs-utils)
 	- в хосте в разделе media создаем две папки serial и movie (mkdir movie tvshow music)
 	- в хосте идем в cd /etc/fstab, где пишем 
-//192.168.0.70/public    /media/movie    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
-//192.168.0.71/public    /media/serial    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
-//192.168.0.72/public    /media/music    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
+//192.168.3.70/public    /media/tvshow    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
+//192.168.3.71/public    /media/movie    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
+//192.168.3.72/public    /media/music    cifs    username=root,password=.Q419Ik11x{md37},iocharset=utf8,noperm 0 0
 (IP и остальное smb контейнеров)
 - mount -a
 pct set 101 -mp0 /media/serial,mp=/media/serial

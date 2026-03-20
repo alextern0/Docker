@@ -4,11 +4,11 @@ services:
     container_name: emulatorjs
     environment:
       - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
+      - PGID=100
+      - TZ=Europe/Moscow
       - SUBFOLDER=/ #optional
     volumes:
-      - /portainer_data/retrogames/config:/config
+      - /portainer_da/retrogames/config:/config
       - /portainer_data/retrogames/data:/data
     ports:
       - 3000:3000 #settings

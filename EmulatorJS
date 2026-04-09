@@ -4,7 +4,7 @@ services:
     container_name: emulatorjs
     environment:
       - PUID=1000
-      - PGID=100
+      - PGID=1000
       - TZ=Europe/Moscow
       - SUBFOLDER=/ #optional
     volumes:
